@@ -1,4 +1,3 @@
-package Heranca.retangulo;
 public class FormaGeometrica {
 
     public double area() {
