@@ -1,3 +1,4 @@
+package Heranca.retangulo;
 public class Program {
         public static void main(String[] args) {
             Retangulo retangulo = new Retangulo();
