@@ -31,7 +31,7 @@ public class Pedido {
 
         System.out.printf("------- RESUMO PEDIDO -------\n");
         for (ItemPedido itemPedido : itens) {
-            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f Quant: %d  Total: %.2f\n", 
+            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n", 
             itemPedido.getProduto().getClass().getSimpleName(),
             itemPedido.getProduto().getTitulo(),
             itemPedido.getProduto().getPrecoBruto(),
