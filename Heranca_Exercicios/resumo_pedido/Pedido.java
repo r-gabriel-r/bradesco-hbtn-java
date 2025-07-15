@@ -34,7 +34,7 @@ public class Pedido {
             System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n", 
             itemPedido.getProduto().getClass().getSimpleName(),
             itemPedido.getProduto().getTitulo(),
-            itemPedido.getProduto().getPrecoBruto(),
+            itemPedido.getProduto().obterPrecoLiquido(),
             itemPedido.getQuantidade(),
             this.precoTotalItem(itemPedido));
         }
@@ -48,7 +48,7 @@ public class Pedido {
     }
 
     private double precoTotalItem(ItemPedido itemPedido) {
-        return itemPedido.getProduto().getPrecoBruto() * itemPedido.getQuantidade();
+        return itemPedido.getProduto().obterPrecoLiquido() * itemPedido.getQuantidade();
     }
 
 
