@@ -9,5 +9,10 @@ public class JadLog implements ProvedorFrete {
         }
         return new Frete(valor * 0.045, TipoProvedorFrete.JADLOG);
     }
+
+    @Override
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.JADLOG;
+    }
     
 }
