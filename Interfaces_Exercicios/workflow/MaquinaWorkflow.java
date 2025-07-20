@@ -1,6 +1,6 @@
 import java.util.List;
 
-import atividade.Atividade;
+import atividades.Atividade;
 
 public class MaquinaWorkflow {
 
