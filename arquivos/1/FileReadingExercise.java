@@ -17,7 +17,7 @@ public class FileReadingExercise {
                 System.out.println(linha);
                 linha = reader.readLine();
             }
-            System.out.printf("\nLeitura do arquivo concluída.");
+            System.out.printf("\nLeitura do arquivo concluída.\n");
             reader.close();
         } catch(IOException e) {
             System.err.printf("Erro ao ler o arquivo %s", fileName);
