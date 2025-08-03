@@ -25,7 +25,7 @@ public class CsvFileReader {
                 linha = reader.readLine();
             }
             System.out.printf("Leitura do arquivo concluída.");
-
+            reader.close();
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo funcionarios.csv");
         }
