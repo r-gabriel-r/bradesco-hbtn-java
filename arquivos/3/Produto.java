@@ -58,12 +58,16 @@ public class Produto {
     // Representação do Produto em String
     @Override
     public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Quantidade: " + quantidade + ", Preço: " + preco;
+        return "ID: " + id + ", Nome: " + nome + ", Quantidade: " + quantidade + ", Preço: " + this.precoFormatado();
     }
 
 
     // Converte um Produto para linha CSV
     public String toCsv() {
         return id + "," + nome + "," + quantidade + "," + preco;
+    }
+
+    private String precoFormatado() {
+        return String.format("%.2f", this.preco);
     }
 }
