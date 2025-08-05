@@ -33,8 +33,8 @@ public class Estoque {
 
             // gravar no final do arquivo o novo produto
             BufferedWriter writer = new BufferedWriter(filewriter);
-            writer.write(produto.toCsv());
             writer.write("\n");
+            writer.write(produto.toCsv());
             
             reader.close();
             writer.close();
