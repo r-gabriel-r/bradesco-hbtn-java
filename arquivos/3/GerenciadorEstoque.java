@@ -58,7 +58,7 @@ public class GerenciadorEstoque {
                             novaQuantidade = scanner.nextInt();
                             estoque.atualizarQuantidade(idAtualizar, novaQuantidade);
                          } catch (Exception e) {
-                        System.err.println("ID ou quantidade inválida");
+                            System.err.println("ID ou quantidade inválida");
                         } 
                         break;
                     case 5:
@@ -71,7 +71,6 @@ public class GerenciadorEstoque {
             } catch(Exception e) {
                 System.err.println("Opção inválida");
             }
-
         }
 
     }

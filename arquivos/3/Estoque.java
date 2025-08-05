@@ -63,8 +63,8 @@ public class Estoque {
             BufferedWriter writer = new BufferedWriter(filewriter);
             // gravar no arquivo os produtos com exceção do produto excluído
             for (String linhaProduto : tempList) {
-                writer.write(linhaProduto);
                 writer.write("\n");
+                writer.write(linhaProduto);
             }
             reader.close();
             writer.close();
@@ -115,8 +115,8 @@ public class Estoque {
             var filewriter = new FileWriter(file, false);
             BufferedWriter writer = new BufferedWriter(filewriter);
             for (String linhaProduto : tempList) {
-                writer.write(linhaProduto);
                 writer.write("\n");
+                writer.write(linhaProduto);
             }
             writer.close();
             
