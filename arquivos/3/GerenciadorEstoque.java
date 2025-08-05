@@ -23,14 +23,18 @@ public class GerenciadorEstoque {
 
                 switch (opcao) {
                     case 1:
-                        System.out.print("Digite o nome do produto: ");
-                        String nome = scanner.nextLine();
-                        System.out.print("Digite a quantidade: ");
-                        int quantidade = scanner.nextInt();
-                        System.out.print("Digite o preço: ");
-                        double preco = scanner.nextDouble();
-                        estoque.adicionarProduto(nome, quantidade, preco);
-                        break;
+                        try {
+                            System.out.print("Digite o nome do produto: ");
+                            String nome = scanner.nextLine();
+                            System.out.print("Digite a quantidade: ");
+                            int quantidade = scanner.nextInt();
+                            System.out.print("Digite o preço: ");
+                            double preco = scanner.nextDouble();
+                            estoque.adicionarProduto(nome, quantidade, preco);
+                            break;
+                        } catch(Exception e) {
+                            System.err.println("Dados Inválidos");
+                        }
                     case 2:
                         try{ 
                             System.out.print("Digite o ID do produto a ser excluído: ");
