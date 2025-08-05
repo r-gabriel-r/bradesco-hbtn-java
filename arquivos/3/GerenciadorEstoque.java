@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -39,11 +40,16 @@ public class GerenciadorEstoque {
                     estoque.exibirEstoque();
                     break;
                 case 4:
-                    System.out.print("Digite o ID do produto: ");
-                    int idAtualizar = scanner.nextInt();
-                    System.out.print("Digite a nova quantidade: ");
-                    int novaQuantidade = scanner.nextInt();
-                    estoque.atualizarQuantidade(idAtualizar, novaQuantidade);
+                    try{
+                        System.out.print("Digite o ID do produto: ");
+                        int idAtualizar = scanner.nextInt();
+                        System.out.print("Digite a nova quantidade: ");
+                        int novaQuantidade;
+                        novaQuantidade = scanner.nextInt();
+                        estoque.atualizarQuantidade(idAtualizar, novaQuantidade);
+                    } catch (Exception e) {
+                        System.err.println("ID ou quantidade inválida");
+                    } 
                     break;
                 case 5:
                     System.out.println("Saindo...");
