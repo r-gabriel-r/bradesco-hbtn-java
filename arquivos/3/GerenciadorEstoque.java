@@ -32,10 +32,15 @@ public class GerenciadorEstoque {
                         estoque.adicionarProduto(nome, quantidade, preco);
                         break;
                     case 2:
-                        System.out.print("Digite o ID do produto a ser excluído: ");
-                        int idExcluir = scanner.nextInt();
-                        estoque.excluirProduto(idExcluir);
-                        break;
+                        try{ 
+                            System.out.print("Digite o ID do produto a ser excluído: ");
+                            int idExcluir = scanner.nextInt();
+                            estoque.excluirProduto(idExcluir);
+                            break;
+                        } catch(Exception e) {
+                            System.err.println("ID Inválido");
+                        }
+
                     case 3:
                         System.out.println("Estoques:");
                         estoque.exibirEstoque();
