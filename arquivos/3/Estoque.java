@@ -62,10 +62,11 @@ public class Estoque {
             var filewriter = new FileWriter(file, false);
             BufferedWriter writer = new BufferedWriter(filewriter);
             // gravar no arquivo os produtos com exceção do produto excluído
+            String tempString = "";
             for (String linhaProduto : tempList) {
-                writer.write("\n");
-                writer.write(linhaProduto);
+                tempString += linhaProduto + "\n";
             }
+            writer.write(tempString.substring(0, tempString.length() - 1)); 
             reader.close();
             writer.close();
         } catch (IOException e) {
@@ -114,10 +115,11 @@ public class Estoque {
             // atualizar o arquivo com os produtos do array temporário
             var filewriter = new FileWriter(file, false);
             BufferedWriter writer = new BufferedWriter(filewriter);
+            String tempString = "";
             for (String linhaProduto : tempList) {
-                writer.write("\n");
-                writer.write(linhaProduto);
+                tempString += linhaProduto + "\n";
             }
+            writer.write(tempString.substring(0, tempString.length() - 1)); 
             writer.close();
             
         } catch (Exception e) {
