@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class GestaoAluno {
+public class GestaoAlunos {
 
     private List<Aluno> alunos = new ArrayList<Aluno>();
 
