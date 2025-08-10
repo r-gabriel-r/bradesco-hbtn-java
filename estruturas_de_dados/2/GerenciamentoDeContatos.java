@@ -53,7 +53,7 @@ public class GerenciamentoDeContatos {
     public void removerContato(String nome) {
         if(this.contatos.containsKey(nome)) {
             this.contatos.remove(nome);
-            System.out.printf("Contato %s removido com sucesso!", nome);
+            System.out.printf("Contato %s removido com sucesso!\n", nome);
         }else {
             System.out.printf("Contato %s não encontrado.", nome);
         }
