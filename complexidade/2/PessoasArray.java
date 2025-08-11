@@ -38,14 +38,13 @@ public class PessoasArray {
         //começar a busca pela posição do meio do array
         int inferior = 0;
         int superior = this.nomes.length - 1;
-        int meio;
+        int meio = 0;
         while(inferior <= superior) {
             meio = (inferior + superior) / 2;
             System.out.printf("Passando pelo indice: %s\n", meio);
             if(this.nomes[meio].equals(nome)) {
                 encontrado = true;
-                System.out.printf("Nome %s encontrado na posição %d\n", nome, meio);
-                return;
+                break;
             }
 
             // verificar se nome que estou procurando esta à direita ou à esquerda 
@@ -55,7 +54,9 @@ public class PessoasArray {
                 superior = meio - 1;
             }
         }
-        if(!encontrado)
+        if(encontrado) {
+            System.out.printf("Nome %s encontrado na posição %d\n", nome, meio);
+        } else 
             throw new IllegalArgumentException("O nome " + nome +" não se encontra no array de nomes");
     }
 
