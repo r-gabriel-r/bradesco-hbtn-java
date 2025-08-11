@@ -45,13 +45,13 @@ public class PessoasArray {
             if(this.nomes[meio].equals(nome)) {
                 encontrado = true;
                 break;
-            }
-
-            // verificar se nome que estou procurando esta à direita ou à esquerda 
-            if(nome.charAt(0) > this.nomes[meio].charAt(0)) {
-                inferior = meio + 1;
             } else {
-                superior = meio - 1;
+                // verificar se nome que estou procurando esta à direita ou à esquerda 
+                if(nome.charAt(0) > this.nomes[meio].charAt(0)) {
+                    inferior = meio + 1;
+                } else {
+                    superior = meio - 1;
+                }
             }
         }
         if(encontrado) {
