@@ -46,10 +46,11 @@ public class PessoasArray {
                 encontrado = true;
                 break;
             } else 
-                // verificar se nome que estou procurando esta à direita ou à esquerda 
                 if(nome.charAt(0) > this.nomes[meio].charAt(0)) {
+                    //  nome que estou procurando esta à direita  
                     inferior = meio + 1;
                 } else {
+                    //  nome que estou procurando esta à esquerda
                     superior = meio - 1;
                 }
         }
