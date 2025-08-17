@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Biblioteca<T> {
+public class Biblioteca<T> extends Midia {
+
+    public Biblioteca() {
+        super("Biblioteca");
+    }
 
     private List<T> lista = new ArrayList<>();
 
