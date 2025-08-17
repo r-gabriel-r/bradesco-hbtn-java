@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Pedido {
 
-    private List<PedidoCookie> cookies;
+    private ArrayList<PedidoCookie> cookies;
 
     public Pedido() {
         this.cookies = new ArrayList<>();
