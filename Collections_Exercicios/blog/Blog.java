@@ -17,8 +17,8 @@ public class Blog {
         this.post = new ArrayList<>();
     }
 
-    public void adicionarPostagem(Post blog) {
-        this.post.add(blog);
+    public void adicionarPostagem(Post post) {
+        this.post.add(post);
     }
 
     public Set<String> obterTodosAutores() {
