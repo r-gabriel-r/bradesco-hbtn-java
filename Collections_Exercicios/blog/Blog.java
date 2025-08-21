@@ -11,20 +11,20 @@ import java.util.TreeSet;
 
 public class Blog {
 
-    private List<Post> postagens;
+    private List<Post> post;
 
     public Blog() {
-        this.postagens = new ArrayList<>();
+        this.post = new ArrayList<>();
     }
 
     public void adicionarPostagem(Post blog) {
-        this.postagens.add(blog);
+        this.post.add(blog);
     }
 
     public Set<String> obterTodosAutores() {
-        Collections.sort(postagens);
+        Collections.sort(post);
         Set<String> autores = new TreeSet<>();
-        for (Post post : postagens) {
+        for (Post post : post) {
             autores.add(post.getAutor());
         }
         return autores;
@@ -32,7 +32,7 @@ public class Blog {
 
     public Map<String, Integer> obterContagemPorCategoria() {
         Map<String, Integer> mapaCategorias = new TreeMap<>();
-        for (Post post : this.postagens) {
+        for (Post post : this.post) {
             Integer quantidade = mapaCategorias.get(post.getCategoria());
             if(quantidade != null ) {
                 mapaCategorias.put(post.getCategoria(), quantidade + 1);
