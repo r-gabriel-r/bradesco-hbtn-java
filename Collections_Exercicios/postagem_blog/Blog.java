@@ -51,7 +51,7 @@ public class Blog {
     public Set<Post> obterPostsPorAutor(Autor autor) {
         List<Post> listaPosts = this.post;
         Collections.sort(listaPosts);
-        Set<Post> postsAutor = new HashSet<>();
+        Set<Post> postsAutor = new TreeSet<>();
         for (Post p : listaPosts) {
             if(p.getAutor().equals(autor)) {
                 postsAutor.add(p);
@@ -63,7 +63,7 @@ public class Blog {
     public Set<Post> obterPostsPorCategoria(Categorias categoria) {
         List<Post> listaPosts = this.post;
         Collections.sort(listaPosts);
-        Set<Post> postsCategoria = new HashSet<>();
+        Set<Post> postsCategoria = new TreeSet<>();
         for (Post p : listaPosts) {
             if(p.getCategoria().equals(categoria)) {
                 postsCategoria.add(p);
@@ -76,7 +76,7 @@ public class Blog {
         Map<Categorias, Set<Post>> postPorCategoria = new HashMap<>();
         for (Post p : this.post) {
             if(!postPorCategoria.containsKey(p.getCategoria())) {
-                postPorCategoria.put(p.getCategoria(), new HashSet<>());
+                postPorCategoria.put(p.getCategoria(), new TreeSet<>());
             }
             postPorCategoria.get(p.getCategoria()).add(p);
         }
@@ -87,7 +87,7 @@ public class Blog {
         Map<Autor, Set<Post>> postsPorAutor = new HashMap<>();
         for (Post p : this.post) {
             if(!postsPorAutor.containsKey(p.getAutor())) {
-                postsPorAutor.put(p.getAutor(), new HashSet<>());
+                postsPorAutor.put(p.getAutor(), new TreeSet<>());
             }
             postsPorAutor.get(p.getAutor()).add(p);
         }
