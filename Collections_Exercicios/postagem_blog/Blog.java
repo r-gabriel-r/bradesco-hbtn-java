@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Blog {
@@ -35,8 +37,8 @@ public class Blog {
         return autores;
     }
 
-    public Map<Categorias, Integer> obterContagemPorCategoria() {
-        Map<Categorias, Integer> mapaCategorias = new HashMap<>();
+    public SortedMap<Categorias, Integer> obterContagemPorCategoria() {
+        SortedMap<Categorias, Integer> mapaCategorias = new TreeMap<>();
         for (Post post : this.post) {
             Integer quantidade = mapaCategorias.get(post.getCategoria());
             if (quantidade != null) {
@@ -72,8 +74,8 @@ public class Blog {
         return postsCategoria;
     }
 
-    public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-        Map<Categorias, Set<Post>> postPorCategoria = new HashMap<>();
+    public SortedMap<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
+        SortedMap<Categorias, Set<Post>> postPorCategoria = new TreeMap<>();
         for (Post p : this.post) {
             if(!postPorCategoria.containsKey(p.getCategoria())) {
                 postPorCategoria.put(p.getCategoria(), new TreeSet<>());
@@ -83,8 +85,8 @@ public class Blog {
         return postPorCategoria;
     }
 
-    public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
-        Map<Autor, Set<Post>> postsPorAutor = new HashMap<>();
+    public SortedMap<Autor, Set<Post>> obterTodosPostsPorAutor() {
+        SortedMap<Autor, Set<Post>> postsPorAutor = new TreeMap<>();
         for (Post p : this.post) {
             if(!postsPorAutor.containsKey(p.getAutor())) {
                 postsPorAutor.put(p.getAutor(), new TreeSet<>());
