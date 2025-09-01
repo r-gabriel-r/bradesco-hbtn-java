@@ -40,7 +40,10 @@ public class Produto {
 
     @Override
     public String toString() {
-        return this.nome + " " + this.preco + " " + this.peso + " " + this.quantidadeEmEstoque + " " + this.tipo;
+
+        return String.format("%s %.4f %.4f %d %s" , this.nome,  this.preco, this.peso, this.quantidadeEmEstoque, this.tipo);
+
+        
     }
     
 }
