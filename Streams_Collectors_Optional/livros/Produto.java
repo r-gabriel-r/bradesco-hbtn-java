@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Produto {
 
     private int codigo;
@@ -21,6 +23,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("[%d] %s %s R$ %.2f", this.codigo, this.nome, this.categoria, this.preco);
+        return String.format(Locale.ITALIAN , "[%d] %s %s R$ %.2f", this.codigo, this.nome, this.categoria, this.preco);
     }
 }
