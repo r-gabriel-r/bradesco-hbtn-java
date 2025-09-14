@@ -21,20 +21,17 @@ public class Produto {
         return categoria;
     }
 
-    
-
     public double getPreco() {
         return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     @Override
     public String toString() {
         return String.format(Locale.ITALIAN , "[%d] %s %s R$ %.2f", this.codigo, this.nome, this.categoria, this.preco);
-    }
-
-    public Object setPreco(double d) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setPreco'");
     }
 
 }
