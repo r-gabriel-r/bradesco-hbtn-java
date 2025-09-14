@@ -20,7 +20,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "[" + this.codigo + "]" + this.cliente.getNome();
+        return "[" + this.codigo + "] " + this.cliente.getNome();
     }
 
 }
