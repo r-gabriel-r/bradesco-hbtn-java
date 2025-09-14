@@ -15,12 +15,16 @@ public class Consulta {
     }
 
     public static List<Produto> obterProdutosPorPrecoMinimo(List<Produto> produtos, double precoMinimo) {
-        return produtos.stream().filter((p) -> p.getPreco() >= precoMinimo ).toList();
+        return produtos.stream().filter((p) -> p.getPreco() >= precoMinimo).toList();
     }
 
-    public static List<Pedido> obterPedidosComEletronicos(List<Pedido> of) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obterPedidosComEletronicos'");
+    public static List<Pedido> obterPedidosComEletronicos(List<Pedido> pedidos) {
+        return pedidos.stream()
+            .filter((p) -> p.getProdutos()
+                    .stream()
+                        .anyMatch(
+                            (prod) -> prod.getCategoria() == CategoriaProduto.ELETRONICO))
+            .toList();       
     }
 
 }
