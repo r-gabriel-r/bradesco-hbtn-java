@@ -12,7 +12,7 @@ public class Principal {
         thread2.start();
         thread2.join();
 
-        System.out.printf("Valor final do contador: %d", contador.getContagem());
+        System.out.println("Valor final do contador: "+ contador.getContagem());
 
     }
     
